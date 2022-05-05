@@ -10,7 +10,7 @@ import ru.ponomarevss.starwarsapi.mvp.model.entity.Planet
 interface IDataSource {
 
     @GET("films/")
-    fun getSeasons(): Single<List<Film>>
+    fun getFilms(): Single<List<Film>>
 
     @GET
     fun getCharacter(@Url url: String): Character

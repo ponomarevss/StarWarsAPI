@@ -11,5 +11,6 @@ data class Planet(
     @Expose val climate: String,
     @Expose val gravity: String,
     @Expose val terrain: String,
-    @Expose val population: String
+    @Expose val population: String,
+    @Expose val url: String
 ): Parcelable

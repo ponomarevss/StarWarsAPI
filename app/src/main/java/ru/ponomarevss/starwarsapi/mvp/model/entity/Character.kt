@@ -7,7 +7,8 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Character(
     @Expose val name: String,
-    @Expose val birth_year: String,
+    @Expose val birthYear: String,
     @Expose val gender: String,
-    @Expose val homeworld: String
+    @Expose val homeworld: String,
+    @Expose val url: String
 ): Parcelable
