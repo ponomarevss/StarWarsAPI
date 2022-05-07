@@ -1,7 +1,6 @@
 package ru.ponomarevss.starwarsapi.mvp.model.entity.room.dao
 
 import androidx.room.*
-import ru.ponomarevss.starwarsapi.mvp.model.entity.room.RoomFilm
 import ru.ponomarevss.starwarsapi.mvp.model.entity.room.RoomPlanet
 
 @Dao

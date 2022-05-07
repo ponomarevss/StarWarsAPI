@@ -4,7 +4,7 @@ import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Single
 import ru.ponomarevss.starwarsapi.mvp.model.entity.Character
 
-interface ICharacterCache {
+interface ICharactersCache {
     fun putCharacter(character: Character): Completable
     fun getCharacter(url: String): Single<Character>
 }

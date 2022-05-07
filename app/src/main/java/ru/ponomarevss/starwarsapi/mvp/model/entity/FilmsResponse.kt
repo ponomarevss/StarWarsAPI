@@ -6,6 +6,5 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class FilmsResponse(
-    @Expose val films: List<Film>
-
+    @Expose val results: List<Film>
 ): Parcelable

@@ -2,7 +2,6 @@ package ru.ponomarevss.starwarsapi.mvp.model.entity.room.dao
 
 import androidx.room.*
 import ru.ponomarevss.starwarsapi.mvp.model.entity.room.RoomCharacter
-import ru.ponomarevss.starwarsapi.mvp.model.entity.room.RoomFilm
 
 @Dao
 interface CharacterDao {
