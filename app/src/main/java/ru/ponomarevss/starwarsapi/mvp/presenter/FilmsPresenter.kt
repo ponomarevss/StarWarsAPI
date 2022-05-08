@@ -38,6 +38,7 @@ class FilmsPresenter(private val uiScheduler: Scheduler) : MvpPresenter<FilmsVie
     }
 
     val filmsListPresenter = FilmsListPresenter()
+    private val initialFilmsList = mutableListOf<Film>()
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
@@ -56,15 +57,33 @@ class FilmsPresenter(private val uiScheduler: Scheduler) : MvpPresenter<FilmsVie
         try {
             repo.getFilms().observeOn(uiScheduler)
                 .subscribe({
-                    filmsListPresenter.films.clear()
-                    filmsListPresenter.films.addAll(it.sortedBy { film -> film.episodeId })
-                    viewState.update()
+                    initialFilmsList.clear()
+                    initialFilmsList.addAll(it.sortedBy { film -> film.episodeId })
+                    setFilmsListPresenter()
                 },{
                     viewState.setAlert(it.message.toString())
                 })
         } catch (e: Throwable) {
             viewState.setAlert(e.message.toString())
         }
+    }
+
+    private fun setFilmsListPresenter() {
+        filmsListPresenter.films.clear()
+        filmsListPresenter.films.addAll(initialFilmsList)
+        viewState.update()
+    }
+
+    fun filterFilms(filter: String?) {
+        filmsListPresenter.films.clear()
+        filter?.let {
+            initialFilmsList.map { film ->
+                if (film.title.contains(it, true)) {
+                    filmsListPresenter.films.add(film)
+                }
+            }
+        }
+        viewState.update()
     }
     
     fun backPressed(): Boolean {

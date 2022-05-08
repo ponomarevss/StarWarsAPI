@@ -3,6 +3,7 @@ package ru.ponomarevss.starwarsapi.ui.fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,6 +48,18 @@ class FilmsFragment: MvpAppCompatFragment(), FilmsView, BackButtonListener {
         vb?.rvFilms?.layoutManager = LinearLayoutManager(context)
         adapter = FilmsRVAdapter(presenter.filmsListPresenter)
         vb?.rvFilms?.adapter = adapter
+
+        vb?.svFilm?.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                presenter.filterFilms(query)
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                presenter.filterFilms(newText)
+                return false
+            }
+        })
     }
 
     override fun setTitle(text: String) {
