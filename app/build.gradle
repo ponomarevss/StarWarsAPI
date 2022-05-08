@@ -32,6 +32,13 @@ android {
         viewBinding true
     }
 
+    buildTypes.each {
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("app.properties").newDataInputStream())
+        def title = properties.getProperty("TITLE", "")
+        it.buildConfigField "String", "TITLE", title
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

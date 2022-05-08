@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/diameter"/>
+
+            <TextView
+                android:id="@+id/tv_diameter"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                tools:text="Diameter"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/climate"/>
+
+            <TextView
+                android:id="@+id/tv_climate"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                tools:text="Climate"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/gravity"/>
+
+            <TextView
+                android:id="@+id/tv_gravity"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                tools:text="Gravity"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/terrain"/>
+
+            <TextView
+                android:id="@+id/tv_terrain"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                tools:text="Terrain"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/population"/>
+
+            <TextView
+                android:id="@+id/tv_population"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                tools:text="Population"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

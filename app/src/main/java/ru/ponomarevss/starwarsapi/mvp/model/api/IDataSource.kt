@@ -4,7 +4,6 @@ import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Url
 import ru.ponomarevss.starwarsapi.mvp.model.entity.Character
-import ru.ponomarevss.starwarsapi.mvp.model.entity.Film
 import ru.ponomarevss.starwarsapi.mvp.model.entity.FilmsResponse
 import ru.ponomarevss.starwarsapi.mvp.model.entity.Planet
 
